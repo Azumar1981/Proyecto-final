@@ -1,8 +1,7 @@
-// src/components/Footer.jsx
-
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 import styles from './Footer.module.css';
-// Importa los iconos de Font Awesome.
+
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 export default function Footer() {
@@ -12,25 +11,23 @@ export default function Footer() {
     <footer className={styles.footerContainer}>
       <div className={styles.section}>
         <div className={styles.column}>
-          <h5 className={styles.title}>TU COMPAÑÍA</h5>
+          <h5 className={styles.title}>MI EMPRESA   TECHSTOREAZU</h5> 
           <p className={styles.description}>
-            Una breve descripción de tu empresa para darle un poco de contexto al visitante.
+            En nuestra empresa encontrarás los mejores productos tecnológicos en calidad y precio.
           </p>
         </div>
         <div className={styles.column}>
           <h5 className={styles.title}>ENLACES RÁPIDOS</h5>
           <ul className={styles.linkList}>
-            <li><a href="#inicio" className={styles.link}>Inicio</a></li>
-            <li><a href="#sobre-nosotros" className={styles.link}>Sobre Nosotros</a></li>
-            <li><a href="#servicios" className={styles.link}>Servicios</a></li>
-            <li><a href="#contacto" className={styles.link}>Contacto</a></li>
-            <li><a href="#politica-privacidad" className={styles.link}>Política de Privacidad</a></li>
+            <li><Link to="/" className={styles.link}>Inicio</Link></li> 
+            <li><Link to="/products" className={styles.link}>Productos</Link></li> 
+            <li><Link to="/add-product" className={styles.link}>Agregar Producto</Link></li> 
+            <li><Link to="/contact" className={styles.link}>Contacto</Link></li> 
           </ul>
         </div>
         <div className={styles.column}>
           <h5 className={styles.title}>SÍGUENOS</h5>
           <div className={styles.socialIcons}>
-            {/* Ahora se usan los componentes de iconos en lugar de letras */}
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
               <FaFacebookF />
             </a>
@@ -48,7 +45,7 @@ export default function Footer() {
       </div>
       <div className={styles.divider}></div>
       <div className={styles.bottomBar}>
-        <p>&copy; {currentYear} Tu Compañía | Todos los derechos reservados.</p>
+        <p>&copy; {currentYear} TechStoreAzu | Todos los derechos reservados.</p> 
       </div>
     </footer>
   );

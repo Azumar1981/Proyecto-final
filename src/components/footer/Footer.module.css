@@ -1,7 +1,7 @@
-/* src/components/Footer.module.css */
+
 
 .footerContainer {
-  background-color: #37aadb; /* Color de fondo */
+  background-color: #37aadb; 
   color: #fff;
   padding: 4rem 2rem;
 }
@@ -76,41 +76,33 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #424242; /* Color de fondo por defecto */
-  color: #fff; /* Color del icono por defecto */
+  background-color: #424242; 
+  color: #fff;
   font-size: 1.2rem;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Agregamos transición para el color del icono */
+  transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 /* Estilos específicos para cada icono al hacer hover */
-.socialIcon:nth-child(1):hover { /* Facebook */
-  background-color: #3b5998; /* Color de Facebook */
+.socialIcon:nth-child(1):hover { 
+  background-color: #3b5998; 
   color: #fff;
 }
 
-.socialIcon:nth-child(2):hover { /* Twitter */
-  background-color: #00acee; /* Color de Twitter */
+.socialIcon:nth-child(2):hover { 
+  background-color: #00acee; 
   color: #fff;
 }
 
-.socialIcon:nth-child(3):hover { /* Instagram */
-  background-color: #C13584; /* Color de Instagram */
+.socialIcon:nth-child(3):hover { 
+  background-color: #C13584; 
   color: #fff;
 }
 
-.socialIcon:nth-child(4):hover { /* LinkedIn */
-  background-color: #0e76a8; /* Color de LinkedIn */
+.socialIcon:nth-child(4):hover { 
+  background-color: #0e76a8; 
   color: #fff;
 }
-
-/* Si prefieres un hover genérico, puedes usar este en lugar de los nth-child específicos: */
-/*
-.socialIcon:hover {
-  background-color: #555;
-  color: #eee;
-}
-*/
 
 .divider {
   border-top: 1px solid #444;

@@ -1,50 +1,150 @@
-.productDetail {
-  padding: 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.productDetail h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.productList {
+.productDetailContainer {
+  font-family: Arial, sans-serif;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
 }
 
-.productCard {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  width: 220px;
-  text-align: center;
-  background-color: #fff;
-  transition: transform 0.2s ease;
+@media (min-width: 768px) {
+  .productDetailContainer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
 }
 
-.productCard:hover {
-  transform: scale(1.05);
-}
-
-.productCard img {
-  width: 100%;
+.productImage {
+  max-width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.productCard h3 {
-  margin: 10px 0 5px;
+@media (min-width: 768px) {
+  .productImage {
+    max-width: 45%;
+  }
 }
 
-.productCard p {
-  margin: 5px 0;
+.productInfo {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
 }
 
-.price {
+@media (min-width: 768px) {
+  .productInfo {
+    text-align: left;
+  }
+}
+
+.productInfo h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.productInfo p {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.productInfo div {
+  margin-top: 1.5rem;
+}
+
+.productInfo label {
+  display: block;
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.productInfo input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 576px) {
+  .buttonGroup {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.editButton,
+.deleteButton,
+.backButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .editButton,
+  .deleteButton,
+  .backButton {
+    width: auto;
+  }
+}
+
+.editButton {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.editButton:hover {
+  background-color: #e0a800;
+}
+
+.deleteButton {
+  background-color: #dc3545;
+  color: white;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+.backButton {
+  background-color: #6c757d;
+  color: white;
+  margin-top: 1rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.backButton:hover {
+  background-color: #5a6268;
+}
+
+.errorMessage {
+  color: red;
   font-weight: bold;
-  color: #2c3e50;
+  text-align: center;
+  margin-top: 2rem;
 }

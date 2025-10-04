@@ -6,7 +6,8 @@ import ProductDetail from './pages/ProductDetail/ProductDetail';
 import ProductForm from './pages/ProductForm/ProductForm';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
-import OffersDisplay from './components/OffersDisplay/OffersDisplay';
+import ProductList from './components/productList/ProductList';
+
 
 
 function App() {
@@ -18,9 +19,10 @@ function App() {
 
          <Routes>
            <Route path='/' element={<HomePage/>} />
-           <Route path='ProductDetail' element={<ProductDetail/>} />
+           <Route path="/product/:id" element={<ProductDetail/>} />
            <Route path='ProductForm' element={<ProductForm/>} />
-           <Route path='OffersDisplay' element={<OffersDisplay/>} />
+           <Route path='ProductList' element={<ProductList/>} />
+           
          </Routes>
          <Footer/>
       </BrowserRouter>

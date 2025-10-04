@@ -1,0 +1,142 @@
+/* src/components/Footer.module.css */
+
+.footerContainer {
+  background-color: #37aadb; /* Color de fondo */
+  color: #fff;
+  padding: 4rem 2rem;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 2rem;
+}
+
+.title {
+  position: relative;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.description {
+  color: #0e0e0e;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+}
+
+.link {
+  color: #0e0e0e;
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 2;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #424242; /* Color de fondo por defecto */
+  color: #fff; /* Color del icono por defecto */
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Agregamos transición para el color del icono */
+}
+
+/* Estilos específicos para cada icono al hacer hover */
+.socialIcon:nth-child(1):hover { /* Facebook */
+  background-color: #3b5998; /* Color de Facebook */
+  color: #fff;
+}
+
+.socialIcon:nth-child(2):hover { /* Twitter */
+  background-color: #00acee; /* Color de Twitter */
+  color: #fff;
+}
+
+.socialIcon:nth-child(3):hover { /* Instagram */
+  background-color: #C13584; /* Color de Instagram */
+  color: #fff;
+}
+
+.socialIcon:nth-child(4):hover { /* LinkedIn */
+  background-color: #0e76a8; /* Color de LinkedIn */
+  color: #fff;
+}
+
+/* Si prefieres un hover genérico, puedes usar este en lugar de los nth-child específicos: */
+/*
+.socialIcon:hover {
+  background-color: #555;
+  color: #eee;
+}
+*/
+
+.divider {
+  border-top: 1px solid #444;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.bottomBar {
+  text-align: center;
+  font-size: 0.8rem;
+  color:#0e0e0e;
+}
+
+/* Media Query para la responsividad */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+}

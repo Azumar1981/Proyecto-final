@@ -1,70 +1,128 @@
-# Getting Started with Create React App
+# 🚀 TechStoreAzu: Sistema de Gestión de Inventario
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Una aplicación web para gestionar un inventario de productos tecnológicos. Permite crear, leer, actualizar y eliminar registros (CRUD), conectándose a una base de datos en tiempo real de Firebase Firestore.
 
-## Available Scripts
+## ✨ Características Principales
 
-In the project directory, you can run:
+- **Gestión de Productos (CRUD):** Un sistema completo para añadir, ver, editar y eliminar productos del inventario.
+- **Navegacion intuitiva:** Barra de navegación con enlaces a la página de inicio, lista de productos y formulario de creación.
+- **Detalles del Producto:** Página individual para cada producto con la opción de editar su stock o eliminarlo.
+- **Notificaciones:** Feedback instantáneo para el usuario (éxito/error) usando `react-hot-toast`.
+- **Conexión con Firebase:** Utiliza Google Firebase para almacenar y gestionar los datos del inventario.
 
-### `npm start`
+## 🔧 Tecnologías Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend:** [React.js](https://reactjs.org/)
+- **Enrutamiento:** [React Router DOM](https://reactrouter.com/)
+- **Manejo de Formularios:** [React Hook Form](https://react-hook-form.com/)
+- **Base de Datos:** [Google Firebase (Firestore)](https://firebase.google.com/)
+- **Notificaciones:** [React Hot Toast](https://react-hot-toast.com/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ⚙️ Guía de Instalación y Configuración Local
 
-### `npm test`
+Sigue estos pasos para levantar el proyecto en tu máquina local.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerrequisitos
 
-### `npm run build`
+- [Node.js](https://nodejs.org/) (versión 16 o superior)
+- [npm](https://www.npmjs.com/) o [yarn](https://yarnpkg.com/)
+- Una cuenta de [Firebase](https://firebase.google.com/) con un proyecto ya creado.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Pasos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.  **Clonar el repositorio**
+    Abre tu terminal y clona este proyecto.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    git clone https://github.com/Azumar1981/Proyecto-final.git
+    cd tu-repositorio
+    ```
 
-### `npm run eject`
+2.  **Instalar dependencias**
+    Este comando instalará todas las librerías necesarias para que el proyecto funcione.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    npm install
+    ```
+    *(O `yarn install` si usas yarn)*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3.  **Configurar las Variables de Entorno**
+    Este paso es crucial para conectar la aplicación con tu base de datos de Firebase.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    a. Crea un archivo llamado `.env` en la raíz del proyecto.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    b. Copia y pega el siguiente contenido en tu archivo `.env`.
 
-## Learn More
+    **Fragmento de codigo**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    # Reemplaza los valores con las credenciales de tu proyecto de Firebase
+    # Puedes encontrarlas en:
+    # Consola de Firebase > Configuración del proyecto > Tus apps > Configuración del SDK
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    REACT_APP_FIREBASE_API_KEY="AIzaSy..."
+    REACT_APP_FIREBASE_AUTH_DOMAIN="your-project-id.firebaseapp.com"
+    REACT_APP_FIREBASE_PROJECT_ID="your-project-id"
+    REACT_APP_FIREBASE_STORAGE_BUCKET="your-project-id.appspot.com"
+    REACT_APP_FIREBASE_MESSAGING_SENDER_ID="1234567890"
+    REACT_APP_FIREBASE_APP_ID="1:1234567890:web:abcdef123456"
+    ```
 
-### Code Splitting
+4.  **Iniciar el servidor de desarrollo**
+    Una vez configurado, puedes iniciar la aplicación.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    ```bash
+    npm start
+    ```
+    La aplicación se abrirá automáticamente en [http://localhost:3000](http://localhost:3000).
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## ☁️ Despliegue en Vercel (con Deploy Automático)
 
-### Making a Progressive Web App
+Vercel es una plataforma ideal para desplegar proyectos de React. Se integra con tu cuenta de GitHub y despliega automáticamente cada cambio que subas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Prerrequisitos para el Despliegue
 
-### Advanced Configuration
+1.  Tu proyecto debe estar subido a un repositorio de **GitHub**.
+2.  Debes tener una cuenta en **Vercel** (puedes registrarte gratis con tu cuenta de GitHub).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Pasos para el Despliegue
 
-### Deployment
+1.  **Sube tu proyecto a GitHub**
+    Si aún no lo has hecho, crea un nuevo repositorio en GitHub y sube tu código. Asegúrate de que tu archivo `.gitignore` incluya la línea `.env` para no exponer tus claves.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    ```bash
+    # (Si es la primera vez que lo subes)
+    git remote add origin [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/tu-usuario/tu-repositorio.git)
+    git push -u origin main
+    ```
 
-### `npm run build` fails to minify
+2.  **Importa tu Proyecto en Vercel**
+    - Inicia sesión en [Vercel](https://vercel.com/).
+    - En tu Dashboard, haz clic en **"Add New..."** y selecciona **"Project"**.
+    - Busca el repositorio de tu proyecto en la lista y haz clic en **"Import"**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3.  **Configura el Proyecto**
+    Vercel autodetectará que es un proyecto de Create React App. La configuración por defecto es casi perfecta, pero **debes configurar las variables de entorno**.
+
+    - **Framework Preset:** Debe ser "Create React App".
+    - **Build and Output Settings:** Déjalo como está.
+    - **Environment Variables:** ¡Este es el paso más importante!
+        - Abre la sección **"Environment Variables"**.
+        - Copia cada una de las claves y valores de tu archivo `.env` local y pégalas aquí. Por ejemplo:
+            - **Name:** `REACT_APP_FIREBASE_API_KEY`
+            - **Value:** `AIzaSy...rest_of_your_key`
+        - Repite el proceso para todas las variables de tu archivo `.env`.
+
+        ![Vercel Environment Variables](https://i.imgur.com/KqT8n6S.png)
+
+4.  **Despliega**
+    - Una vez que hayas agregado todas las variables de entorno, haz clic en el botón **"Deploy"**.
+    - Vercel comenzará a construir tu proyecto. En uno o dos minutos, ¡tu sitio estará online!
+    - Al finalizar, Vercel te dará la URL pública de tu aplicación.
+
+### 🚀 Deploy Automático
+
+A partir de ahora, cada vez que hagas un `git push` a la rama principal (`main`) de tu repositorio en GitHub, **Vercel detectará el cambio y automáticamente hará un nuevo deploy** con la versión más reciente de tu código. ¡No necesitas hacer nada más!
+
+---
